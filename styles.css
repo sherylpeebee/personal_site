@@ -56,8 +56,15 @@ li.cover.flex.current {
 div#arrow {
     height: 27%;
     width: 6%;
-    position: relative;
-    bottom: -85vh;
+    position: fixed;
+    bottom: -15vh;
+    left: 46%;
+}
+div#cover-arrow {
+    height: 27%;
+    width: 6%;
+    position: fixed;
+    bottom: -15vh;
     left: 46%;
 }
 
@@ -71,6 +78,26 @@ img#down {
     position: absolute;
     right: -11%;
     /* margin-left: 41%; */
+}
+
+.flex{
+  display: flex;
+}
+
+.convo-wrapper.flex {
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: flex-start; */
+    /* float: inherit; */
+}
+div#like {
+    position: fixed;
+    top: 35%;
+    left: 20%;
+}
+
+.like{
+  display: none;
 }
 
 /*img.flex-item {
