@@ -6,11 +6,45 @@ $(function () {
       prevSlide: function() { console.log('previous slide'); }
   });
 
-  $('.like').fadeIn(2000);
+
+list = $('.selfies');
+
+function faces(){
+var i = 0;
+  setInterval(function() {
+    i++ ;
+      $(list[i]).show();
+      if (i >= list.length){
+        i = 0;
+        console.log("done");
+        $('.selfies').hide();
+      }
+  }, 1100);
+
+}
+  faces();
+
+
+// setInterval(function(){
+//   faces();
+// }, 10000);
+// console.log(faces);
+
+
+
+  $('.intro')
+  .typetype('Hi! I\'m Sheryl!');
 
   setTimeout(function(){
-    $('.list')
-    .typetype('make things pretty!')
+    $('.like').fadeIn(2000);
+  }, 4000);
+
+
+
+
+  setTimeout(function(){
+    $('.make')
+    .typetype('make things pretty!')//try to separate the adjectives into own elements for own styling
     .delay(1000)
     .backspace(20)
     .typetype('make things smart.')
@@ -19,9 +53,9 @@ $(function () {
     .typetype('make things work.')
     .delay(1000)
     .backspace(30)
-    .typetype('make things! ^_^ ');
+    .typetype('make.allTheThings( )');
     // .fadeOut(); // regular jQuery effects queue up nicely
-  }, 2000);
+  }, 7000);
 
 
 });
