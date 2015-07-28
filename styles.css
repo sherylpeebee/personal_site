@@ -29,6 +29,18 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face{
+	font-family: 'fancypants';
+	src: url('/fonts/fancypants/FancyPants-webfont.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+	font-family: 'diner-obese';
+	src: url('/fonts/diner/Diner-Obese-webfont.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html{
     height: 100%;
@@ -90,7 +102,7 @@ html{
 }
 
 .intro {
-    font-family: monospace;
+    font-family: "Quicksand_Dash";
     margin-left: 2%;
 }
 
@@ -142,20 +154,40 @@ div#like {
 
 .like{
   display: none;
+  /*font-family: "fancypants";*/
+font-family: 'diner-obese';
+font-size: 4em;
+letter-spacing: 2vw;
+margin-left: -55px;
 }
 
-#seeMore{
-  font-family: 'Quicksand_Dash';
+.make{
+  font-family: monospace;
+}
+
+#seeMore {
+    font-family: 'Quicksand_Dash';
+    position: fixed;
+    top: 92vh;
+    right: 4%;
 }
 
 img.flex-item.selfies {
     position: absolute;
     left: -130px;
     top: 37px;
-    /*visibility: hidden;*/
-
     display: none;
 }
+img#bulb {
+    position: absolute;
+    left: 22%;
+    top: -2%;
+}
+/*img#bulb {
+    top: 40vh;
+    position: relative;
+}*/
+
 /*img.flex-item {
     width: 24vw;
     height: 100%;
