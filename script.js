@@ -76,7 +76,7 @@ $('li.nav_to_page.tab-li ').on('click', function(){
 });
 
 
-
+  var $projects = $('img.projects');
 
   $('img.projects:not(.project_hero)').on('click', function(){
     var newSrc = $(this).attr('src');
