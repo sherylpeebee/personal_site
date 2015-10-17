@@ -103,7 +103,8 @@ html{
 
 .intro {
     font-family: "Quicksand_Dash";
-    margin-left: 2%;
+    margin-left: 16%;
+    margin-top: 6%;
 }
 
 li.cover.flex.current {
@@ -127,9 +128,9 @@ div#cover-arrow {
     left: 46%;
 }
 
-img#down {
+img#down{
     max-width: 100%;
-    -webkit-animation: bounce 2s infinite ease-in-out;
+    /*-webkit-animation: bounce 2s infinite ease-in-out;*/
 }
 
 #portrait-container {
@@ -544,3 +545,137 @@ img#bulb {
   background-color: #29171A;
   border: 3px solid #D02644;
 }*/
+
+.container-fluid.page-view-wrapper {
+    height: 100%;
+    margin: 3% 0% 0% 4%;
+}
+div#heroes-wrapper {
+    height: 80%;
+}
+div#hero-image {
+    height: 80%;
+    margin-top: 30px;
+}
+div#popup-gallery-container {
+    height: 20%;
+    margin: 50px 3px 0px 3px;
+}
+div#project-writeup {
+    height: 80%;
+    margin-left: -120px;
+}
+img.thumbnails {
+    width: 125px;
+}
+@media only screen and (max-device-width: 480px) {
+  .page-view-wrapper {
+    max-height: 100vh;
+  }
+}
+/*h1.project-title {
+    margin-left: 17.5%;
+    font-size: 6em;
+}*/
+
+div#technologies-used-wrapper {
+    margin-top: 80%;
+}
+ul.tech-list {
+    display: inline-flex;
+    margin-top: 5%;
+}
+li.techs {
+    list-style: none;
+}
+h1#project-title {
+    /*margin-top: 10%;*/
+    font-size: 3vw;
+    font-family: 'diner-obese';
+    letter-spacing: 2vw;
+}
+div#right-side-wrapper {
+    width: 34%;
+    margin-left: 9%;
+}
+p.summary {
+    margin-top: 5%;
+    padding-left: 0;
+    font-size: .8vw;
+    font-family: 'quicksand-light';
+}
+/*div#right-side-wrapper {
+    width: 25%;
+    margin-left: -38%;
+    margin-top: 39%;
+}*/
+/*.writeup-wrapper {
+    display: -webkit-box;
+}*/
+
+#wrapper {
+	width: 660px;
+	height: 310px;
+	margin: -155px 0 0 -330px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+#wrapper:after {
+	content: url(img/shadow.png);
+	position: absolute;
+	bottom: -40px;
+	left: 5px;
+	z-index: 1;
+}
+#carousel {
+	width: 550px;
+	height: 310px;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+}
+#carousel img {
+	display: block;
+	float: left;
+}
+#pager {
+	width: 100px;
+	height: 310px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#pager div {
+	height: 80px;
+	width: 100px;
+}
+#pager img {
+	cursor: pointer;
+	display: block;
+	height: 70px;
+	width: 100px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+/*ul.side-nav {
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 100px;
+}*/
+
+ul.side-nav {
+    background-color: black;
+    color: white;
+     position: fixed;
+     left: 0;
+    width: 9%;
+    height: 904px;
+}
+
+li.nav_to_page {
+    margin-top: 50px;
+}
