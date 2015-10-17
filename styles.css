@@ -12,8 +12,8 @@
 }
 
 @font-face{
-	font-family: 'Comfortaa-bold';
-	src: url('/fonts/Comfortaa/Comfortaa_Bold.ttf');
+	font-family: 'Quicksand-Bold';
+	src: url('/fonts/quicksand/Quicksand-Bold.otf');
   font-weight: normal;
   font-style: normal;
 }
@@ -607,7 +607,8 @@ div#right-side-wrapper {
     margin-left: 9%;
 }
 p.summary {
-    font-family: 'quicksand-light';
+    font-family: 'Comfortaa-regular';
+    margin-top: 20px;
 }
 /*div#right-side-wrapper {
     width: 25%;
@@ -749,14 +750,17 @@ div#projects_banner {
 img.projects:not(.project_hero) {
     height: 150px;
     width: 45%;
-    margin-top: 6px;
+    margin-top: 25px;
+    box-shadow: 12px 13px 43px 0;
+    border-radius: 5px;
+    margin-right: 14px;
 }
 
 .project_hero {
     max-height: 400px;
     width: 66%;
-    margin-top: 40px;
-    margin-left: -10px;
+    margin-top: 20px;
+    margin-left: -1px;
 }
 .project_details {
     width: 30%;
