@@ -76,5 +76,13 @@ var i = 0;
     // .fadeOut(); // regular jQuery effects queue up nicely
   }, 7000);
 
+$('li.nav_to_page.tab-li ').on('click', function(){
+  if($('.side-nav').hasClass('inactive')){
+    $('.side-nav').removeClass('inactive').addClass('active');
+  }
+  else if($('.side-nav').hasClass('active')){
+    $('.side-nav').removeClass('active').addClass('inactive');
+  }
+});
 
 });
