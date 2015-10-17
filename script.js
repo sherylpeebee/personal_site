@@ -43,22 +43,12 @@ var i = 0;
 }
   faces();
 
-
-// setInterval(function(){
-//   faces();
-// }, 10000);
-// console.log(faces);
-
-
-
   $('.intro')
   .typetype('Hi! I\'m Sheryl!');
 
   setTimeout(function(){
     $('.like').fadeIn(2000);
   }, 4000);
-
-
 
 
   setTimeout(function(){
@@ -84,5 +74,17 @@ $('li.nav_to_page.tab-li ').on('click', function(){
     $('.side-nav').removeClass('active').addClass('inactive');
   }
 });
+
+
+
+
+  $('img.projects:not(.project_hero)').on('click', function(){
+    var newSrc = $(this).attr('src');
+    var oldSrc = $('img.project_hero').attr('src');
+    $('img.project_hero').attr('src', newSrc);
+    $(this).attr('src', oldSrc);
+  });
+
+
 
 });
