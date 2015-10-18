@@ -11,49 +11,39 @@ $(function () {
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
     type: 'image',
-    // tLoading: 'Loading image #%curr%...',
     mainClass: 'mfp-img-mobile',
     gallery: {
       enabled: true,
       navigateByImgClick: true,
       preload: [0,1] // Will preload 0 - before current, and 1 after the current image
     }
-    // image: {
-    //   tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-    //   titleSrc: function(item) {
-    //     return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-    //   }
-    // }
   });
 
-list = $('.selfies');
+  list = $('.selfies');
 
-function faces(){
-var i = 0;
-  setInterval(function() {
-    i++ ;
-      $(list[i]).show();
-      if (i >= list.length){
-        i = 0;
-        console.log("done");
-        $('.selfies').hide();
-      }
-  }, 800);
-
-}
+  function faces(){
+  var i = 0;
+    setInterval(function() {
+      i++ ;
+        $(list[i]).show();
+        if (i >= list.length){
+          i = 0;
+          console.log("done");
+          $('.selfies').hide();
+        }
+    }, 800);
+  }
   faces();
 
-  $('.intro')
-  .typetype('Hi! I\'m Sheryl!');
+  $('.intro').typetype('Hi! I\'m Sheryl!');
 
   setTimeout(function(){
     $('.like').fadeIn(2000);
   }, 4000);
 
-
   setTimeout(function(){
     $('.make')
-    .typetype('make things pretty!')//try to separate the adjectives into own elements for own styling
+    .typetype('make things pretty!')
     .delay(1000)
     .backspace(20)
     .typetype('make things smart.')
@@ -63,7 +53,6 @@ var i = 0;
     .delay(1000)
     .backspace(30)
     .typetype('make.allTheThings( )');
-    // .fadeOut(); // regular jQuery effects queue up nicely
   }, 7000);
 
 $('li.nav_to_page.tab-li ').on('click', function(){
@@ -75,13 +64,29 @@ $('li.nav_to_page.tab-li ').on('click', function(){
   }
 });
 
+var projects =
+[
+  {
+    title: 'the history of us',
+    tech_icon: '/assets/tech_icons/mean_icon.jpg',
+    views: [
+      {img: '/assets/projects/history_splash.png', summary: 'some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened'},
+      {img: '/assets/projects/history_blank.png', summary: 'fbjsdb hfsjv cd fsdji a hnkg '},
+      {img: '/assets/projects/history_storyForm.png', summary: '0000000 fdsxfd dwhs fsdn fharuhgdj'}
+    ]
+  }
+];
 
-  var views =
-  [
-    {img: '/assets/projects/history_splash.png', summary: 'some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened'},
-    {img: '/assets/projects/history_blank.png', summary: 'fbjsdb hfsjv cd fsdji a hnkg '},
-    {img: '/assets/projects/history_storyForm.png', summary: '0000000 fdsxfd dwhs fsdn fharuhgdj'}
-  ];
+
+  var $currentProjectTitle = $('#project-title').text().trim();
+  console.log($currentProjectTitle);
+  var currentProject;
+  projects.forEach(function(project){
+    if(project.title === $currentProjectTitle){
+      currentProject = project;
+    }
+  });
+  console.log(currentProject);
 
   $('img.projects:not(.project_hero)').on('click', function(){
     var newSrc = $(this).attr('src');
@@ -89,8 +94,9 @@ $('li.nav_to_page.tab-li ').on('click', function(){
     $('img.project_hero').attr('src', newSrc);
     $(this).attr('src', oldSrc);
     var $currentView = $('img.project_hero').attr('src');
+    console.log($currentView);
     var summary;
-    views.forEach(function(view){
+    currentProject.views.forEach(function(view){
       if(view.img === $currentView){
         summary = view.summary;
       }
