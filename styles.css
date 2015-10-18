@@ -744,7 +744,7 @@ div#projects_banner {
 }
 
 img.projects:not(.project_hero) {
-    height: 150px;
+    /* height: 38%; */
     width: 45%;
     margin-top: 25px;
     box-shadow: 12px 13px 43px 0;
@@ -762,14 +762,13 @@ img.projects:not(.project_hero) {
     width: 30%;
      font-size: 1.5vw;
     margin-left: 70%;
-    margin-top: -39%;
+    margin-top: -35%;
 }
-
 img#tech_icon {
-    max-height: 80px;
-    width: 169px;
+    max-height: 70px;
     position: relative;
     left: 125px;
+    width: 16%;
 }
 .project_link {
     margin-top: 20px;
@@ -779,9 +778,10 @@ p.summary {
     font-family: 'Comfortaa-regular';
     margin-top: 20px;
     color: white;
+    width: 66%;
 }
 
 .view_it {
   color: #BEC3F1;
-  font-size: 15px;
+  font-size: 1vw;
 }

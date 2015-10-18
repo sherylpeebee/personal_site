@@ -76,14 +76,31 @@ $('li.nav_to_page.tab-li ').on('click', function(){
 });
 
 
-  var $projects = $('img.projects');
+  var views =
+  [
+    {img: '/assets/projects/history_splash.png', summary: 'some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened'},
+    {img: '/assets/projects/history_blank.png', summary: 'fbjsdb hfsjv cd fsdji a hnkg '},
+    {img: '/assets/projects/history_storyForm.png', summary: '0000000 fdsxfd dwhs fsdn fharuhgdj'}
+  ];
 
   $('img.projects:not(.project_hero)').on('click', function(){
     var newSrc = $(this).attr('src');
     var oldSrc = $('img.project_hero').attr('src');
     $('img.project_hero').attr('src', newSrc);
     $(this).attr('src', oldSrc);
+    var $currentView = $('img.project_hero').attr('src');
+    var summary;
+    views.forEach(function(view){
+      if(view.img === $currentView){
+        summary = view.summary;
+      }
+    });
+    $('.summary').text(summary);
   });
+
+
+
+
 
 
 
