@@ -111,17 +111,24 @@ var projects =
   var project_page_width = $('.project_page').width();
 
 $('.project_page').click(function(e){
-  $(project_pages[counter]).css('transform', 'translate(-'+ project_page_width + 'px)');
-  counter --;
   console.log(counter);
   e.stopPropagation();
-  // if(counter === totalPages - 1){
-  //   //do something...
-  // }
+  if(counter === 0){
+    // $(project_pages[totalPages-1]).css('transform', 'translate('+ project_page_width + 'px)');
+    $('.project_page').css('transform', '');
+    counter = totalPages;
+  }
+  else{
+    $(project_pages[counter]).css('transform', 'translate(-'+ project_page_width + 'px)');
+  }
+  counter --;
+
 });
 
-$(this).click(function(e){
-  console.log(e.target);
-});
+$('.btn').click(function(e){
+  e.stopPropagation();
+  alert('works');
+})
+
 
 });
