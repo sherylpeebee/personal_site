@@ -10,7 +10,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face{
 	font-family: 'Quicksand-Bold';
 	src: url('/fonts/quicksand/Quicksand-Bold.otf');
@@ -41,18 +40,15 @@
   font-weight: normal;
   font-style: normal;
 }
-
 html{
     height: 100%;
     overflow-x: hidden;
 }
-
 .curtains{
     width: 100%;
     z-index:1;
     position:relative;
 }
-
 .curtains>li{
     -webkit-transform:translateZ(0);
     background: white;
@@ -67,29 +63,23 @@ html{
 }
 .curtains>li.hidden{display:none;}
 .curtains>li:first-child{z-index:2;}
-
-
 .flex{
   display: flex;
 }
-
 .intro {
     font-family: "Quicksand_Dash";
     margin-left: 12%;
     margin-top: 6%;
     font-size: 6vw;
 }
-
 @media (max-width:480px) {
   .intro{
     margin-left: 6%;
   }
 }
-
 li.cover.flex.current {
     display: flex;
 }
-
 div#arrow {
     height: 27%;
     width: 6%;
@@ -104,12 +94,10 @@ div#cover-arrow {
     bottom: -15vh;
     left: 46%;
 }
-
 img#down{
     max-width: 100%;
     /*-webkit-animation: bounce 2s infinite ease-in-out;*/
 }
-
 #portrait-container {
     width: 511px;
     height: 100%;
@@ -117,7 +105,6 @@ img#down{
     right: -11%;
     text-align: center;
 }
-
 .convo-wrapper.flex {
     flex-direction: row;
     align-items: center;
@@ -127,7 +114,6 @@ div#like {
     top: 38%;
     left: 20%;
 }
-
 .like{
   display: none;
 font-family: 'diner-obese';
@@ -135,20 +121,16 @@ font-size: 9vw;
 letter-spacing: 2vw;
 margin-left: -55px;
 }
-
 .make{
   font-family: monospace;
   font-size: 3vw;
 }
-
 #seeMore {
     font-family: 'Quicksand_Dash';
     position: fixed;
     top: 92vh;
     right: 4%;
 }
-
-
 @media (max-width: 480px){
   #seeMore {
   top: 65vh;
