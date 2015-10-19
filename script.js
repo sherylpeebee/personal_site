@@ -73,7 +73,8 @@ var projects =
       {img: '/assets/projects/history_splash.png', summary: 'some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened'},
       {img: '/assets/projects/history_blank.png', summary: 'fbjsdb hfsjv cd fsdji a hnkg '},
       {img: '/assets/projects/history_storyForm.png', summary: '0000000 fdsxfd dwhs fsdn fharuhgdj'}
-    ]
+    ],
+    link: 'https://the-history-of-us.herokuapp.com/#/'
   }
 ];
 
@@ -104,10 +105,23 @@ var projects =
     $('.summary').text(summary);
   });
 
+  var project_pages = $('.project_page');
+  var totalPages = project_pages.length;
+  var counter = totalPages-1;
+  var project_page_width = $('.project_page').width();
 
+$('.project_page').click(function(e){
+  $(project_pages[counter]).css('transform', 'translate(-'+ project_page_width + 'px)');
+  counter --;
+  console.log(counter);
+  e.stopPropagation();
+  // if(counter === totalPages - 1){
+  //   //do something...
+  // }
+});
 
-
-
-
+$(this).click(function(e){
+  console.log(e.target);
+});
 
 });
