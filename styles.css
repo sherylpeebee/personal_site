@@ -327,7 +327,7 @@ p.summary {
 }
 
 .view_it {
-  color: #BEC3F1;
+  color: #BEF1EB;
   font-size: 1vw;
 }
 
@@ -353,11 +353,16 @@ i.fa.fa-bars {
 }
 
 .project_page.one{
-  background-color: #AB14DA;
+  /*background-color: #E860B7;*/
+  /*background-color: #DA6814;*/
+  /*background-color: #18043A;*/
+  /*background-color: #250C3C;*/
+  background-color:rgb(148, 99, 173);
 }
 .project_page.two{
   background-color: rgb(222, 27, 70);
 }
 .project_page.three{
-  background-color: blue;
+  /*background-color: blue;*/
+  background-color: #58D6BA;
 }

@@ -58,21 +58,31 @@ $(function () {
     {
       title: 'the history of us',
       views: [
-        {img: '/assets/projects/history_splash.png', summary: 'some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened'},
-        {img: '/assets/projects/history_blank.png', summary: 'fbjsdb hfsjv cd fsdji a hnkg '},
-        {img: '/assets/projects/history_storyForm.png', summary: '0000000 fdsxfd dwhs fsdn fharuhgdj'},
-        {img: "/assets/projects/history_example.png", summary: 'ggoogoogaga'},
-        {img: "/assets/projects/history_status.png", summary: 'poo'}
+        {img: '/assets/projects/history_splash.png', summary: 'A web app dedicated to close-knit social sharing. For the times when somebody, but not <em>everybody</em> needs to know...'},
+        {img: '/assets/projects/history_blank.png', summary: 'A getting started prompt'},
+        {img: '/assets/projects/history_storyForm.png', summary: 'Remember that time when you did that thing?'},
+        {img: "/assets/projects/history_example.png", summary: 'Everyone you invite to the timeline can see what you have to say and add some history of their own, too.'},
+        {img: "/assets/projects/history_status.png", summary: 'Just a friendly reminder. You have to create an account to really use this service, so make one!'}
       ]
     },
     {
       title: 'driftr',
       views: [
-        {img: "/assets/projects/driftr_splash.png", summary: 'some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened'},
-        {img: "/assets/projects/driftr_profile.png", summary: 'yo mama'},
-        {img: "/assets/projects/driftr_listings.png" , summary: 'how now brown cow'},
-        {img: "/assets/projects/driftr_travelForm.png", summary: 'laalala lee doodee'},
-        {img: "/assets/projects/driftr_parallax.png", summary: 'crunk.'}
+        {img: "/assets/projects/driftr_splash.png", summary: 'A proof of concept of a realized concept! 👯 Book stays to rest your weary bones or find some friends to fill your homes! '},
+        {img: "/assets/projects/driftr_profile.png", summary: 'Build a profile and tell a little about yourself, your home and what you\'re looking for.' },
+        {img: "/assets/projects/driftr_listings.png" , summary: 'Need a place to stay? See all available listings.'},
+        {img: "/assets/projects/driftr_travelForm.png", summary: 'Book a stay somewhere that catches your eye.'},
+        {img: "/assets/projects/driftr_parallax.png", summary: 'You, too, can have an ambient sense of peace and satisfaction while traveling. A bit of parallax prettiness built with Materialize CSS.'}
+      ]
+    },
+    {
+      title: 'your forecaster',
+      views: [
+        {img: "/assets/projects/weather_mainBlur.png", summary: 'A simple weather forecasting app built with the Wunderground API'},
+        {img: "/assets/projects/weather_login.png", summary: 'Utilizes Passport JS to authenticate users. Take comfort in knowing your priceless weather gems are unassailable... even against the most wily of weather bandits.'},
+        {img: "/assets/projects/weather_changeLocale.png" , summary: 'See the weather in more detail. Up-to-the-minute updates available in a hidden panel that opens on a click. Why not see how the weather is elsewhere, too?'},
+        {img: "/assets/projects/weather_newLocale.png", summary: 'Change it up.'},
+        {img: "/assets/projects/weather_forecast.png", summary: 'Never be caught without sunscreen or an umbrella again!'}
       ]
     }
   ];
@@ -104,7 +114,7 @@ $(function () {
         summary = view.summary;
       }
     });
-    $(this).parent().parent().children('.summary').text(summary);
+    $(this).parent().parent().children('.summary').html(summary);
   });
 
   var project_pages = $('.project_page');
