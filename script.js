@@ -89,7 +89,8 @@ var projects =
   });
   console.log(currentProject);
 
-  $('img.projects:not(.project_hero)').on('click', function(){
+  $('img.projects:not(.project_hero)').on('click', function(e){
+    e.stopPropagation();
     var newSrc = $(this).attr('src');
     var oldSrc = $('img.project_hero').attr('src');
     $('img.project_hero').attr('src', newSrc);
@@ -114,7 +115,6 @@ $('.project_page').click(function(e){
   console.log(counter);
   e.stopPropagation();
   if(counter === 0){
-    // $(project_pages[totalPages-1]).css('transform', 'translate('+ project_page_width + 'px)');
     $('.project_page').css('transform', '');
     counter = totalPages;
   }
@@ -128,7 +128,7 @@ $('.project_page').click(function(e){
 $('.btn').click(function(e){
   e.stopPropagation();
   alert('works');
-})
+});
 
 
 });
