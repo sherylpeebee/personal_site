@@ -16,8 +16,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "lightbox2": "~2.8.1"
-  }
+  ]
 }

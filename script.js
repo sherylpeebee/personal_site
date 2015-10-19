@@ -8,17 +8,6 @@ $(function () {
 
   $pages = $('.curtain-page');
 
-  $('.popup-gallery').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-    }
-  });
-
   list = $('.selfies');
 
   function faces(){
@@ -68,13 +57,23 @@ $(function () {
   [
     {
       title: 'the history of us',
-      tech_icon: '/assets/tech_icons/mean_icon.jpg',
       views: [
         {img: '/assets/projects/history_splash.png', summary: 'some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened'},
         {img: '/assets/projects/history_blank.png', summary: 'fbjsdb hfsjv cd fsdji a hnkg '},
-        {img: '/assets/projects/history_storyForm.png', summary: '0000000 fdsxfd dwhs fsdn fharuhgdj'}
-      ],
-      link: 'https://the-history-of-us.herokuapp.com/#/'
+        {img: '/assets/projects/history_storyForm.png', summary: '0000000 fdsxfd dwhs fsdn fharuhgdj'},
+        {img: "/assets/projects/history_example.png", summary: 'ggoogoogaga'},
+        {img: "/assets/projects/history_status.png", summary: 'poo'}
+      ]
+    },
+    {
+      title: 'driftr',
+      views: [
+        {img: "/assets/projects/driftr_splash.png", summary: 'some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened some stuff happened'},
+        {img: "/assets/projects/driftr_profile.png", summary: 'yo mama'},
+        {img: "/assets/projects/driftr_listings.png" , summary: 'how now brown cow'},
+        {img: "/assets/projects/driftr_travelForm.png", summary: 'laalala lee doodee'},
+        {img: "/assets/projects/driftr_parallax.png", summary: 'crunk.'}
+      ]
     }
   ];
 
