@@ -744,6 +744,11 @@ img.projects:not(.project_hero) {
     border-radius: 5px;
     margin-right: 14px;
 }
+img.projects:not(.project_hero):hover {
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+}
+
 
 .project_hero {
     max-height: 400px;
@@ -828,10 +833,10 @@ i.fa.fa-bars {
 }
 
 .project_page.one{
-  background-color: red;
+  background-color: rgb(222, 27, 70);
 }
 .project_page.two{
-  background-color: green;
+  background-color: #AB14DA;
 }
 .project_page.three{
   background-color: blue;

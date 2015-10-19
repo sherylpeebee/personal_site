@@ -79,7 +79,7 @@ var projects =
 ];
 
 
-  var $currentProjectTitle = $('#project-title').text().trim();
+  var $currentProjectTitle = $('#project-title').text().toLowerCase().trim();
   console.log($currentProjectTitle);
   var currentProject;
   projects.forEach(function(project){
@@ -91,9 +91,10 @@ var projects =
 
   $('img.projects:not(.project_hero)').on('click', function(e){
     e.stopPropagation();
+    var $currentHero = $(this).parent().parent().children('.project_hero');
     var newSrc = $(this).attr('src');
-    var oldSrc = $('img.project_hero').attr('src');
-    $('img.project_hero').attr('src', newSrc);
+    var oldSrc = $($currentHero).attr('src');
+    $($currentHero).attr('src', newSrc);
     $(this).attr('src', oldSrc);
     var $currentView = $('img.project_hero').attr('src');
     console.log($currentView);
